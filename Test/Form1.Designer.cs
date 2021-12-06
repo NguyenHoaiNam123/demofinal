@@ -1,0 +1,108 @@
+﻿
+namespace Test
+{
+    partial class frmQuanLy
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.btnPhieuNhapKho = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDatHang = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPhieuXuatKho = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnThongKe = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnPhieuNhapKho,
+            this.btnDatHang,
+            this.btnPhieuXuatKho,
+            this.btnThongKe});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(545, 29);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // btnPhieuNhapKho
+            // 
+            this.btnPhieuNhapKho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhieuNhapKho.Name = "btnPhieuNhapKho";
+            this.btnPhieuNhapKho.Size = new System.Drawing.Size(158, 25);
+            this.btnPhieuNhapKho.Text = "PHIẾU NHẬP KHO";
+            this.btnPhieuNhapKho.Click += new System.EventHandler(this.btnPhieuNhapKho_Click);
+            // 
+            // btnDatHang
+            // 
+            this.btnDatHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatHang.Name = "btnDatHang";
+            this.btnDatHang.Size = new System.Drawing.Size(105, 25);
+            this.btnDatHang.Text = "ĐẶT HÀNG";
+            // 
+            // btnPhieuXuatKho
+            // 
+            this.btnPhieuXuatKho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhieuXuatKho.Name = "btnPhieuXuatKho";
+            this.btnPhieuXuatKho.Size = new System.Drawing.Size(154, 25);
+            this.btnPhieuXuatKho.Text = "PHIẾU XUẤT KHO";
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(102, 25);
+            this.btnThongKe.Text = "THỐNG KÊ";
+            // 
+            // frmQuanLy
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ClientSize = new System.Drawing.Size(545, 268);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "frmQuanLy";
+            this.Text = "QUẢN LÝ HÀNG HÓA";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem btnPhieuNhapKho;
+        private System.Windows.Forms.ToolStripMenuItem btnDatHang;
+        private System.Windows.Forms.ToolStripMenuItem btnPhieuXuatKho;
+        private System.Windows.Forms.ToolStripMenuItem btnThongKe;
+    }
+}
+
