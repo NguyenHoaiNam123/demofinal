@@ -29,26 +29,13 @@ namespace Test
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnPhieuNhapKho = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDatHang = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPhieuXuatKho = new System.Windows.Forms.ToolStripMenuItem();
             this.btnThongKe = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnPhieuNhapKho,
-            this.btnDatHang,
-            this.btnPhieuXuatKho,
-            this.btnThongKe});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(545, 29);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // btnPhieuNhapKho
             // 
@@ -79,6 +66,19 @@ namespace Test
             this.btnThongKe.Size = new System.Drawing.Size(102, 25);
             this.btnThongKe.Text = "THỐNG KÊ";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnPhieuNhapKho,
+            this.btnDatHang,
+            this.btnPhieuXuatKho,
+            this.btnThongKe});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(545, 29);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // frmQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,7 +88,7 @@ namespace Test
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmQuanLy";
-            this.Text = "QUẢN LÝ HÀNG HÓA";
+            this.Text = "TOBACCO VIET COMPANY";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -98,11 +98,11 @@ namespace Test
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnPhieuNhapKho;
         private System.Windows.Forms.ToolStripMenuItem btnDatHang;
         private System.Windows.Forms.ToolStripMenuItem btnPhieuXuatKho;
         private System.Windows.Forms.ToolStripMenuItem btnThongKe;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

@@ -12,7 +12,6 @@ namespace Test
 {
     public partial class frmPhieuNhapKho : Form
     {
-        List<String> listGioiTinh = new List<string>() { "Nam, Nữ" };
         public frmPhieuNhapKho()
         {
             InitializeComponent();
