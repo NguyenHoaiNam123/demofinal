@@ -1,7 +1,7 @@
 ﻿
 namespace Test
 {
-    partial class frmQuanLy
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -75,19 +75,20 @@ namespace Test
             this.btnThongKe});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(545, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(801, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // frmQuanLy
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(545, 268);
+            this.BackgroundImage = global::Test.Properties.Resources.tobacco;
+            this.ClientSize = new System.Drawing.Size(801, 400);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmQuanLy";
+            this.Name = "frmMain";
             this.Text = "TOBACCO VIET COMPANY";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
