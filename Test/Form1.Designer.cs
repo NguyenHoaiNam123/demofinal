@@ -51,6 +51,7 @@ namespace Test
             this.btnDatHang.Name = "btnDatHang";
             this.btnDatHang.Size = new System.Drawing.Size(105, 25);
             this.btnDatHang.Text = "ĐẶT HÀNG";
+            this.btnDatHang.Click += new System.EventHandler(this.btnDatHang_Click);
             // 
             // btnPhieuXuatKho
             // 
@@ -68,6 +69,7 @@ namespace Test
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Gold;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnPhieuNhapKho,
             this.btnDatHang,

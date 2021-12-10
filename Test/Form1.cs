@@ -24,5 +24,11 @@ namespace Test
             //hiển thị form đó lên
             nhap.ShowDialog();
         }
+
+        private void btnDatHang_Click(object sender, EventArgs e)
+        {
+            frmThongtinDaiLy info = new frmThongtinDaiLy();
+            info.ShowDialog();
+        }
     }
 }
