@@ -1,7 +1,7 @@
 ﻿
 namespace Test
 {
-    partial class frmDatHang
+    partial class frmPhieuNhapKho
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Test
         /// </summary>
         private void InitializeComponent()
         {
+            this.labelTen = new System.Windows.Forms.Label();
             this.grpNhapThongTin = new System.Windows.Forms.GroupBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -39,24 +40,25 @@ namespace Test
             this.btnThoat = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.labelSĐT = new System.Windows.Forms.Label();
+            this.lblTongTien = new System.Windows.Forms.Label();
             this.lblSoluong = new System.Windows.Forms.Label();
             this.lblTenHang = new System.Windows.Forms.Label();
-            this.dgvDatHang = new System.Windows.Forms.DataGridView();
-            this.lblHinhThucThanhToan = new System.Windows.Forms.Label();
-            this.rdbtnMomo = new System.Windows.Forms.RadioButton();
-            this.rdbtnChuyenKhoan = new System.Windows.Forms.RadioButton();
-            this.rdbtnTienMat = new System.Windows.Forms.RadioButton();
+            this.dgvPhieuNhapKho = new System.Windows.Forms.DataGridView();
             this.grpNhapThongTin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhapKho)).BeginInit();
             this.SuspendLayout();
+            // 
+            // labelTen
+            // 
+            this.labelTen.AutoSize = true;
+            this.labelTen.Location = new System.Drawing.Point(3, 19);
+            this.labelTen.Name = "labelTen";
+            this.labelTen.Size = new System.Drawing.Size(0, 13);
+            this.labelTen.TabIndex = 0;
+            this.labelTen.Click += new System.EventHandler(this.label1_Click);
             // 
             // grpNhapThongTin
             // 
-            this.grpNhapThongTin.Controls.Add(this.rdbtnTienMat);
-            this.grpNhapThongTin.Controls.Add(this.rdbtnChuyenKhoan);
-            this.grpNhapThongTin.Controls.Add(this.rdbtnMomo);
-            this.grpNhapThongTin.Controls.Add(this.lblHinhThucThanhToan);
             this.grpNhapThongTin.Controls.Add(this.btnSua);
             this.grpNhapThongTin.Controls.Add(this.btnThem);
             this.grpNhapThongTin.Controls.Add(this.txtMaHang);
@@ -66,13 +68,13 @@ namespace Test
             this.grpNhapThongTin.Controls.Add(this.btnThoat);
             this.grpNhapThongTin.Controls.Add(this.txtTongTien);
             this.grpNhapThongTin.Controls.Add(this.txtSoLuong);
-            this.grpNhapThongTin.Controls.Add(this.labelSĐT);
+            this.grpNhapThongTin.Controls.Add(this.lblTongTien);
             this.grpNhapThongTin.Controls.Add(this.lblSoluong);
             this.grpNhapThongTin.Controls.Add(this.lblTenHang);
-            this.grpNhapThongTin.Location = new System.Drawing.Point(12, 12);
+            this.grpNhapThongTin.Location = new System.Drawing.Point(13, 19);
             this.grpNhapThongTin.Name = "grpNhapThongTin";
             this.grpNhapThongTin.Size = new System.Drawing.Size(599, 217);
-            this.grpNhapThongTin.TabIndex = 2;
+            this.grpNhapThongTin.TabIndex = 1;
             this.grpNhapThongTin.TabStop = false;
             this.grpNhapThongTin.Text = "Nhập thông tin";
             // 
@@ -109,6 +111,7 @@ namespace Test
             this.lblMaHang.Size = new System.Drawing.Size(54, 13);
             this.lblMaHang.TabIndex = 15;
             this.lblMaHang.Text = "Mã Hàng:";
+            this.lblMaHang.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // cboTenHang
             // 
@@ -135,6 +138,7 @@ namespace Test
             this.btnLuu.TabIndex = 11;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThoat
             // 
@@ -144,6 +148,7 @@ namespace Test
             this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtTongTien
             // 
@@ -159,14 +164,14 @@ namespace Test
             this.txtSoLuong.Size = new System.Drawing.Size(207, 20);
             this.txtSoLuong.TabIndex = 7;
             // 
-            // labelSĐT
+            // lblTongTien
             // 
-            this.labelSĐT.AutoSize = true;
-            this.labelSĐT.Location = new System.Drawing.Point(7, 108);
-            this.labelSĐT.Name = "labelSĐT";
-            this.labelSĐT.Size = new System.Drawing.Size(59, 13);
-            this.labelSĐT.TabIndex = 3;
-            this.labelSĐT.Text = "Tổng Tiền:";
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Location = new System.Drawing.Point(7, 108);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(59, 13);
+            this.lblTongTien.TabIndex = 3;
+            this.lblTongTien.Text = "Tổng Tiền:";
             // 
             // lblSoluong
             // 
@@ -186,91 +191,49 @@ namespace Test
             this.lblTenHang.TabIndex = 0;
             this.lblTenHang.Text = "Tên Hàng:";
             // 
-            // dgvDatHang
+            // dgvPhieuNhapKho
             // 
-            this.dgvDatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatHang.Location = new System.Drawing.Point(12, 235);
-            this.dgvDatHang.Name = "dgvDatHang";
-            this.dgvDatHang.Size = new System.Drawing.Size(599, 150);
-            this.dgvDatHang.TabIndex = 3;
+            this.dgvPhieuNhapKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuNhapKho.Location = new System.Drawing.Point(12, 242);
+            this.dgvPhieuNhapKho.Name = "dgvPhieuNhapKho";
+            this.dgvPhieuNhapKho.Size = new System.Drawing.Size(600, 150);
+            this.dgvPhieuNhapKho.TabIndex = 2;
             // 
-            // lblHinhThucThanhToan
-            // 
-            this.lblHinhThucThanhToan.AutoSize = true;
-            this.lblHinhThucThanhToan.Location = new System.Drawing.Point(331, 16);
-            this.lblHinhThucThanhToan.Name = "lblHinhThucThanhToan";
-            this.lblHinhThucThanhToan.Size = new System.Drawing.Size(122, 13);
-            this.lblHinhThucThanhToan.TabIndex = 19;
-            this.lblHinhThucThanhToan.Text = "Hình Thức Thanh Toán:";
-            // 
-            // rdbtnMomo
-            // 
-            this.rdbtnMomo.AutoSize = true;
-            this.rdbtnMomo.Location = new System.Drawing.Point(460, 16);
-            this.rdbtnMomo.Name = "rdbtnMomo";
-            this.rdbtnMomo.Size = new System.Drawing.Size(105, 17);
-            this.rdbtnMomo.TabIndex = 20;
-            this.rdbtnMomo.TabStop = true;
-            this.rdbtnMomo.Text = "Momo: Số Momo";
-            this.rdbtnMomo.UseVisualStyleBackColor = true;
-            // 
-            // rdbtnChuyenKhoan
-            // 
-            this.rdbtnChuyenKhoan.AutoSize = true;
-            this.rdbtnChuyenKhoan.Location = new System.Drawing.Point(460, 48);
-            this.rdbtnChuyenKhoan.Name = "rdbtnChuyenKhoan";
-            this.rdbtnChuyenKhoan.Size = new System.Drawing.Size(131, 17);
-            this.rdbtnChuyenKhoan.TabIndex = 21;
-            this.rdbtnChuyenKhoan.TabStop = true;
-            this.rdbtnChuyenKhoan.Text = "Chuyển Khoản: Số TK";
-            this.rdbtnChuyenKhoan.UseVisualStyleBackColor = true;
-            // 
-            // rdbtnTienMat
-            // 
-            this.rdbtnTienMat.AutoSize = true;
-            this.rdbtnTienMat.Location = new System.Drawing.Point(460, 79);
-            this.rdbtnTienMat.Name = "rdbtnTienMat";
-            this.rdbtnTienMat.Size = new System.Drawing.Size(67, 17);
-            this.rdbtnTienMat.TabIndex = 22;
-            this.rdbtnTienMat.TabStop = true;
-            this.rdbtnTienMat.Text = "Tiền Mặt";
-            this.rdbtnTienMat.UseVisualStyleBackColor = true;
-            // 
-            // frmDatHang
+            // frmPhieuNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 426);
-            this.Controls.Add(this.dgvDatHang);
+            this.ClientSize = new System.Drawing.Size(655, 396);
+            this.Controls.Add(this.dgvPhieuNhapKho);
             this.Controls.Add(this.grpNhapThongTin);
-            this.Name = "frmDatHang";
-            this.Text = "Đặt Hàng";
+            this.Controls.Add(this.labelTen);
+            this.Name = "frmPhieuNhapKho";
+            this.Text = "PHIẾU NHẬP KHO";
+            this.Load += new System.EventHandler(this.frmPhieuNhapKho_Load);
             this.grpNhapThongTin.ResumeLayout(false);
             this.grpNhapThongTin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhapKho)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Label labelTen;
         private System.Windows.Forms.GroupBox grpNhapThongTin;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox txtMaHang;
-        private System.Windows.Forms.Label lblMaHang;
-        private System.Windows.Forms.ComboBox cboTenHang;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.Label labelSĐT;
+        private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label lblSoluong;
         private System.Windows.Forms.Label lblTenHang;
-        private System.Windows.Forms.DataGridView dgvDatHang;
-        private System.Windows.Forms.RadioButton rdbtnTienMat;
-        private System.Windows.Forms.RadioButton rdbtnChuyenKhoan;
-        private System.Windows.Forms.RadioButton rdbtnMomo;
-        private System.Windows.Forms.Label lblHinhThucThanhToan;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.DataGridView dgvPhieuNhapKho;
+        private System.Windows.Forms.ComboBox cboTenHang;
+        private System.Windows.Forms.Label lblMaHang;
+        private System.Windows.Forms.TextBox txtMaHang;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnSua;
     }
 }

@@ -59,6 +59,7 @@ namespace Test
             this.btnPhieuXuatKho.Name = "btnPhieuXuatKho";
             this.btnPhieuXuatKho.Size = new System.Drawing.Size(154, 25);
             this.btnPhieuXuatKho.Text = "PHIẾU XUẤT KHO";
+            this.btnPhieuXuatKho.Click += new System.EventHandler(this.btnPhieuXuatKho_Click);
             // 
             // btnThongKe
             // 
@@ -66,6 +67,7 @@ namespace Test
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(102, 25);
             this.btnThongKe.Text = "THỐNG KÊ";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // menuStrip1
             // 

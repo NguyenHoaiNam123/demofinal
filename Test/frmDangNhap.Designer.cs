@@ -1,7 +1,7 @@
 ﻿
 namespace Test
 {
-    partial class frmThongtinDaiLy
+    partial class frmDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -35,46 +35,55 @@ namespace Test
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.lblDangNhap = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTenDangNhap
             // 
             this.lblTenDangNhap.AutoSize = true;
-            this.lblTenDangNhap.Location = new System.Drawing.Point(12, 24);
+            this.lblTenDangNhap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenDangNhap.Location = new System.Drawing.Point(2, 121);
             this.lblTenDangNhap.Name = "lblTenDangNhap";
-            this.lblTenDangNhap.Size = new System.Drawing.Size(84, 13);
+            this.lblTenDangNhap.Size = new System.Drawing.Size(150, 24);
             this.lblTenDangNhap.TabIndex = 0;
             this.lblTenDangNhap.Text = "Tên đăng nhập:";
             // 
             // lblMatKhau
             // 
             this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Location = new System.Drawing.Point(12, 79);
+            this.lblMatKhau.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMatKhau.Location = new System.Drawing.Point(2, 196);
             this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(58, 13);
+            this.lblMatKhau.Size = new System.Drawing.Size(108, 24);
             this.lblMatKhau.TabIndex = 1;
             this.lblMatKhau.Text = "Mật khẩu: ";
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(112, 24);
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.Location = new System.Drawing.Point(176, 120);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(197, 20);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(197, 25);
             this.txtTenDangNhap.TabIndex = 2;
+            this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(112, 76);
+            this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(176, 195);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(197, 20);
+            this.txtMatKhau.Size = new System.Drawing.Size(197, 25);
             this.txtMatKhau.TabIndex = 3;
             this.txtMatKhau.UseSystemPasswordChar = true;
+            this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(131, 126);
+            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Location = new System.Drawing.Point(51, 268);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.Size = new System.Drawing.Size(101, 36);
             this.btnDangNhap.TabIndex = 4;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
@@ -82,27 +91,41 @@ namespace Test
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(268, 126);
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(197, 268);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(110, 36);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // frmThongtinDaiLy
+            // lblDangNhap
+            // 
+            this.lblDangNhap.AutoSize = true;
+            this.lblDangNhap.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangNhap.Location = new System.Drawing.Point(108, 32);
+            this.lblDangNhap.Name = "lblDangNhap";
+            this.lblDangNhap.Size = new System.Drawing.Size(147, 31);
+            this.lblDangNhap.TabIndex = 6;
+            this.lblDangNhap.Text = "Đăng Nhập";
+            // 
+            // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 272);
+            this.BackgroundImage = global::Test.Properties.Resources.backgroundlogin;
+            this.ClientSize = new System.Drawing.Size(400, 418);
+            this.Controls.Add(this.lblDangNhap);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.lblMatKhau);
             this.Controls.Add(this.lblTenDangNhap);
-            this.Name = "frmThongtinDaiLy";
+            this.Name = "frmDangNhap";
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +139,6 @@ namespace Test
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label lblDangNhap;
     }
 }

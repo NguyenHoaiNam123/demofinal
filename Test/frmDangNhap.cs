@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Test
 {
-    public partial class frmThongtinDaiLy : Form
+    public partial class frmDangNhap : Form
     {
-        public frmThongtinDaiLy()
+        public frmDangNhap()
         {
             InitializeComponent();
         }
@@ -36,12 +36,13 @@ namespace Test
                     SqlDataReader dta = cmd.ExecuteReader();
                     if(dta.Read()==true)
                     {
-                        frmDatHang dathang = new frmDatHang();
-                        dathang.ShowDialog();
+                        frmMain main = new frmMain();
+                        main.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Sai Tên Đăng Nhập hoặc Sai Mật Khẩu!");
+                        MessageBox.Show("Sai Tên Đăng Nhập hoặc Mật Khẩu!");
                     }    
 
 
@@ -50,6 +51,21 @@ namespace Test
                 {
                     MessageBox.Show("Lỗi kết nối!");
                 }    
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

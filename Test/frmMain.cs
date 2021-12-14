@@ -27,8 +27,20 @@ namespace Test
 
         private void btnDatHang_Click(object sender, EventArgs e)
         {
-            frmThongtinDaiLy info = new frmThongtinDaiLy();
-            info.ShowDialog();
+            frmDatHang dathang = new frmDatHang();
+            dathang.ShowDialog();
+        }
+
+        private void btnPhieuXuatKho_Click(object sender, EventArgs e)
+        {
+            frmPhieuXuatKho xuat = new frmPhieuXuatKho();
+            xuat.ShowDialog();
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            frmThongKe thongke = new frmThongKe();
+            thongke.ShowDialog();
         }
     }
 }
