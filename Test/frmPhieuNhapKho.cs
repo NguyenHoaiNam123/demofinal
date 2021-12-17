@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Test
 {
@@ -39,20 +41,62 @@ namespace Test
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            //thao tác để lấy dữ liệu
-            MessageBox.Show("Lưu phiếu nhập kho thành công");
-            //đóng form hiện tại
-            this.Close();
+            string sqlDELETE = "DELETE FROM PhieuNhapHang WHERE maHang = @maHang";
+            SqlCommand cmd = new SqlCommand(sqlDELETE, con);
+            cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
+            cmd.Parameters.AddWithValue("tenHang", txtTenHang.Text);
+            cmd.Parameters.AddWithValue("soLuong", txtSoLuong.Text);
+            cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
+            cmd.ExecuteNonQuery();
+            HienThi();
         }
 
         private void frmPhieuNhapKho_Load(object sender, EventArgs e)
         {
-            
+            string conString = ConfigurationManager.ConnectionStrings["PhieuNhapKho"].ConnectionString.ToString();
+            con = new SqlConnection(conString);
+            con.Open();
+            HienThi();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+        SqlConnection con;
+        public void HienThi()
+        {
+            string sqlSELECT = "SELECT *FROM PhieuNhapHang";
+            SqlCommand cmd = new SqlCommand(sqlSELECT, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dsPhieuNhapKho.DataSource = dt; 
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string sqlINSERT = "INSERT INTO PhieuNhapHang VALUES (@maHang, @tenHang, @soLuong, @giaNhapHang)";
+            SqlCommand cmd = new SqlCommand(sqlINSERT, con);
+            cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
+            cmd.Parameters.AddWithValue("tenHang", txtTenHang.Text);
+            cmd.Parameters.AddWithValue("soLuong", txtSoLuong.Text);
+            cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
+            cmd.ExecuteNonQuery();
+            HienThi();
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string sqlEDIT = "UPDATE PhieuNhapHang SET tenHang = @tenHang, soLuong = @soLuong, giaNhapHang = @giaNhapHang WHERE maHang = @maHang";
+            SqlCommand cmd = new SqlCommand(sqlEDIT, con);
+            cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
+            cmd.Parameters.AddWithValue("tenHang", txtTenHang.Text);
+            cmd.Parameters.AddWithValue("soLuong", txtSoLuong.Text);
+            cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
+            cmd.ExecuteNonQuery();
+            HienThi();
         }
     }
 }
