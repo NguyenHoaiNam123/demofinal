@@ -53,7 +53,7 @@ namespace Test
 
         private void frmPhieuNhapKho_Load(object sender, EventArgs e)
         {
-            string conString = ConfigurationManager.ConnectionStrings["PhieuNhapKho"].ConnectionString.ToString();
+            string conString = ConfigurationManager.ConnectionStrings["User"].ConnectionString.ToString();
             con = new SqlConnection(conString);
             con.Open();
             HienThi();
@@ -76,12 +76,14 @@ namespace Test
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string sqlINSERT = "INSERT INTO PhieuNhapHang VALUES (@maHang, @tenHang, @soLuong, @giaNhapHang)";
+            string sqlINSERT = "INSERT INTO PhieuNhapHang VALUES (@maHang, @tenHang, @soLuong, @giaNhapHang, @tongTien)";
             SqlCommand cmd = new SqlCommand(sqlINSERT, con);
             cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
             cmd.Parameters.AddWithValue("tenHang", txtTenHang.Text);
             cmd.Parameters.AddWithValue("soLuong", txtSoLuong.Text);
             cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
+            cmd.Parameters.AddWithValue("tongTien", txtTongTien.Text);
+            
             cmd.ExecuteNonQuery();
             HienThi();
 
@@ -97,6 +99,16 @@ namespace Test
             cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
             cmd.ExecuteNonQuery();
             HienThi();
+        }
+
+        private void dsPhieuNhapKho_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtpNgayNhap_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

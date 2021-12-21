@@ -33,6 +33,8 @@ namespace Test
             this.btnDatHang = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPhieuXuatKho = new System.Windows.Forms.ToolStripMenuItem();
             this.btnThongKe = new System.Windows.Forms.ToolStripMenuItem();
+            this.thsmThongKeuNhapXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.doanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,11 +65,28 @@ namespace Test
             // 
             // btnThongKe
             // 
+            this.btnThongKe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thsmThongKeuNhapXuat,
+            this.doanhThuToolStripMenuItem});
             this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(102, 25);
             this.btnThongKe.Text = "THỐNG KÊ";
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
+            // thsmThongKeuNhapXuat
+            // 
+            this.thsmThongKeuNhapXuat.Name = "thsmThongKeuNhapXuat";
+            this.thsmThongKeuNhapXuat.Size = new System.Drawing.Size(237, 26);
+            this.thsmThongKeuNhapXuat.Text = "Thống Kê Nhập Xuất";
+            this.thsmThongKeuNhapXuat.Click += new System.EventHandler(this.thoToolStripMenuItem_Click);
+            // 
+            // doanhThuToolStripMenuItem
+            // 
+            this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
+            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.doanhThuToolStripMenuItem.Text = "Doanh Thu";
+            this.doanhThuToolStripMenuItem.Click += new System.EventHandler(this.doanhThuToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -108,6 +127,8 @@ namespace Test
         private System.Windows.Forms.ToolStripMenuItem btnPhieuXuatKho;
         private System.Windows.Forms.ToolStripMenuItem btnThongKe;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem thsmThongKeuNhapXuat;
+        private System.Windows.Forms.ToolStripMenuItem doanhThuToolStripMenuItem;
     }
 }
 

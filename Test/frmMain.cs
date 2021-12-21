@@ -39,8 +39,19 @@ namespace Test
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void thoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             frmThongKe thongke = new frmThongKe();
             thongke.ShowDialog();
+        }
+
+        private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDoanhThu doanhthu = new frmDoanhThu();
+            doanhthu.ShowDialog();
         }
     }
 }
