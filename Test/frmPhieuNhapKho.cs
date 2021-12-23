@@ -44,9 +44,11 @@ namespace Test
             string sqlDELETE = "DELETE FROM PhieuNhapHang WHERE maHang = @maHang";
             SqlCommand cmd = new SqlCommand(sqlDELETE, con);
             cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
-            cmd.Parameters.AddWithValue("tenHang", txtTenHang.Text);
-            cmd.Parameters.AddWithValue("soLuong", txtSoLuong.Text);
+            cmd.Parameters.AddWithValue("tenHang", cbbTenHang.Text);
+            cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
             cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
+            cmd.Parameters.AddWithValue("tongTien", txtTongTien.Text);
+            cmd.Parameters.AddWithValue("ngayNhap", dtpNgayNhap.Text);
             cmd.ExecuteNonQuery();
             HienThi();
         }
@@ -76,14 +78,15 @@ namespace Test
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string sqlINSERT = "INSERT INTO PhieuNhapHang VALUES (@maHang, @tenHang, @soLuong, @giaNhapHang, @tongTien)";
+            string sqlINSERT = "INSERT INTO PhieuNhapHang VALUES (@maHang, @tenHang, @soLuong, @giaNhapHang, @tongTien, @ngayNhap)";
             SqlCommand cmd = new SqlCommand(sqlINSERT, con);
             cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
-            cmd.Parameters.AddWithValue("tenHang", txtTenHang.Text);
-            cmd.Parameters.AddWithValue("soLuong", txtSoLuong.Text);
+            cmd.Parameters.AddWithValue("tenHang", cbbTenHang.Text);
+            cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
             cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
             cmd.Parameters.AddWithValue("tongTien", txtTongTien.Text);
-            
+            cmd.Parameters.AddWithValue("ngayNhap", dtpNgayNhap.Text);
+
             cmd.ExecuteNonQuery();
             HienThi();
 
@@ -91,12 +94,14 @@ namespace Test
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string sqlEDIT = "UPDATE PhieuNhapHang SET tenHang = @tenHang, soLuong = @soLuong, giaNhapHang = @giaNhapHang WHERE maHang = @maHang";
+            string sqlEDIT = "UPDATE PhieuNhapHang SET tenHang = @tenHang, soLuong = @soLuong, giaNhapHang = @giaNhapHang, tongTien = @tongTien, ngayNhap = @ngayNhap WHERE maHang = @maHang";
             SqlCommand cmd = new SqlCommand(sqlEDIT, con);
             cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
-            cmd.Parameters.AddWithValue("tenHang", txtTenHang.Text);
-            cmd.Parameters.AddWithValue("soLuong", txtSoLuong.Text);
+            cmd.Parameters.AddWithValue("tenHang", cbbTenHang.Text);
+            cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
             cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
+            cmd.Parameters.AddWithValue("tongTien", txtTongTien.Text);
+            cmd.Parameters.AddWithValue("ngayNhap", dtpNgayNhap.Text);
             cmd.ExecuteNonQuery();
             HienThi();
         }
@@ -107,6 +112,16 @@ namespace Test
         }
 
         private void dtpNgayNhap_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dsPhieuNhapKho_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+         
+        }
+
+        private void txtTenHang_TextChanged(object sender, EventArgs e)
         {
 
         }
