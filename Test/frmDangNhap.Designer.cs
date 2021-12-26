@@ -115,7 +115,7 @@ namespace Test
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Test.Properties.Resources.backgroundlogin;
-            this.ClientSize = new System.Drawing.Size(400, 418);
+            this.ClientSize = new System.Drawing.Size(386, 430);
             this.Controls.Add(this.lblDangNhap);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
@@ -123,7 +123,9 @@ namespace Test
             this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.lblMatKhau);
             this.Controls.Add(this.lblTenDangNhap);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.ResumeLayout(false);

@@ -73,7 +73,8 @@ namespace Test
             SqlDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
-            dsPhieuNhapKho.DataSource = dt; 
+            dsPhieuNhapKho.DataSource = dt;
+            dsPhieuNhapKho.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -118,12 +119,45 @@ namespace Test
 
         private void dsPhieuNhapKho_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-         
+            int numrow;
+            numrow = e.RowIndex;
+            txtMaHang.Text = dsPhieuNhapKho.Rows[numrow].Cells[0].Value.ToString();
+            cbbTenHang.Text = dsPhieuNhapKho.Rows[numrow].Cells[1].Value.ToString();
+            nmSoLuong.Text = dsPhieuNhapKho.Rows[numrow].Cells[2].Value.ToString();
+            txtGiaNhapHang.Text = dsPhieuNhapKho.Rows[numrow].Cells[3].Value.ToString();
+            txtTongTien.Text = dsPhieuNhapKho.Rows[numrow].Cells[4].Value.ToString();
+            dtpNgayNhap.Text = dsPhieuNhapKho.Rows[numrow].Cells[5].Value.ToString();
+
+
         }
 
         private void txtTenHang_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void Update()
+        {
+            try
+            {
+                double sl = Convert.ToDouble(nmSoLuong.Text);
+                int gia = Convert.ToInt32(txtGiaNhapHang.Text);
+                double tong = (sl * gia);
+                txtTongTien.Text = tong.ToString();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void nmSoLuong_ValueChanged(object sender, EventArgs e)
+        {
+            Update();
+        }
+
+        private void txtGiaNhapHang_TextChanged(object sender, EventArgs e)
+        {
+            Update();
         }
     }
 }

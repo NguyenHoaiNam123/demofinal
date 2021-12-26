@@ -98,7 +98,7 @@ namespace Test
             this.btnThongKe});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(801, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(977, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -108,7 +108,7 @@ namespace Test
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = global::Test.Properties.Resources.tobacco;
-            this.ClientSize = new System.Drawing.Size(801, 400);
+            this.ClientSize = new System.Drawing.Size(977, 456);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
