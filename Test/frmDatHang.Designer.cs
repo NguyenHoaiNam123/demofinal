@@ -30,6 +30,8 @@ namespace Test
         private void InitializeComponent()
         {
             this.grpNhapThongTin = new System.Windows.Forms.GroupBox();
+            this.lblHinhThucThanhToan = new System.Windows.Forms.Label();
+            this.cbbHinhThucThanhToan = new System.Windows.Forms.ComboBox();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.lblGia = new System.Windows.Forms.Label();
             this.cbbTenHang = new System.Windows.Forms.ComboBox();
@@ -45,8 +47,6 @@ namespace Test
             this.lblSoluong = new System.Windows.Forms.Label();
             this.lblTenHang = new System.Windows.Forms.Label();
             this.dgvDatHang = new System.Windows.Forms.DataGridView();
-            this.lblHinhThucThanhToan = new System.Windows.Forms.Label();
-            this.cbbHinhThucThanhToan = new System.Windows.Forms.ComboBox();
             this.grpNhapThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatHang)).BeginInit();
@@ -76,6 +76,27 @@ namespace Test
             this.grpNhapThongTin.TabIndex = 2;
             this.grpNhapThongTin.TabStop = false;
             this.grpNhapThongTin.Text = "Nhập thông tin";
+            // 
+            // lblHinhThucThanhToan
+            // 
+            this.lblHinhThucThanhToan.AutoSize = true;
+            this.lblHinhThucThanhToan.Location = new System.Drawing.Point(8, 220);
+            this.lblHinhThucThanhToan.Name = "lblHinhThucThanhToan";
+            this.lblHinhThucThanhToan.Size = new System.Drawing.Size(122, 13);
+            this.lblHinhThucThanhToan.TabIndex = 19;
+            this.lblHinhThucThanhToan.Text = "Hình Thức Thanh Toán:";
+            // 
+            // cbbHinhThucThanhToan
+            // 
+            this.cbbHinhThucThanhToan.FormattingEnabled = true;
+            this.cbbHinhThucThanhToan.Items.AddRange(new object[] {
+            "Momo : Số Momo",
+            "Chuyển khoản : STK",
+            "Tiền mặt"});
+            this.cbbHinhThucThanhToan.Location = new System.Drawing.Point(136, 217);
+            this.cbbHinhThucThanhToan.Name = "cbbHinhThucThanhToan";
+            this.cbbHinhThucThanhToan.Size = new System.Drawing.Size(156, 21);
+            this.cbbHinhThucThanhToan.TabIndex = 6;
             // 
             // txtGia
             // 
@@ -222,30 +243,10 @@ namespace Test
             this.dgvDatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatHang.Location = new System.Drawing.Point(12, 12);
             this.dgvDatHang.Name = "dgvDatHang";
+            this.dgvDatHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatHang.Size = new System.Drawing.Size(469, 463);
             this.dgvDatHang.TabIndex = 3;
             this.dgvDatHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatHang_CellClick);
-            // 
-            // lblHinhThucThanhToan
-            // 
-            this.lblHinhThucThanhToan.AutoSize = true;
-            this.lblHinhThucThanhToan.Location = new System.Drawing.Point(8, 220);
-            this.lblHinhThucThanhToan.Name = "lblHinhThucThanhToan";
-            this.lblHinhThucThanhToan.Size = new System.Drawing.Size(122, 13);
-            this.lblHinhThucThanhToan.TabIndex = 19;
-            this.lblHinhThucThanhToan.Text = "Hình Thức Thanh Toán:";
-            // 
-            // cbbHinhThucThanhToan
-            // 
-            this.cbbHinhThucThanhToan.FormattingEnabled = true;
-            this.cbbHinhThucThanhToan.Items.AddRange(new object[] {
-            "Momo : Số Momo",
-            "Chuyển khoản : STK",
-            "Tiền mặt"});
-            this.cbbHinhThucThanhToan.Location = new System.Drawing.Point(136, 217);
-            this.cbbHinhThucThanhToan.Name = "cbbHinhThucThanhToan";
-            this.cbbHinhThucThanhToan.Size = new System.Drawing.Size(156, 21);
-            this.cbbHinhThucThanhToan.TabIndex = 6;
             // 
             // frmDatHang
             // 

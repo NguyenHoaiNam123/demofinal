@@ -257,6 +257,7 @@ namespace Test
             this.dsPhieuNhapKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dsPhieuNhapKho.Location = new System.Drawing.Point(12, 19);
             this.dsPhieuNhapKho.Name = "dsPhieuNhapKho";
+            this.dsPhieuNhapKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dsPhieuNhapKho.Size = new System.Drawing.Size(506, 460);
             this.dsPhieuNhapKho.TabIndex = 2;
             this.dsPhieuNhapKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsPhieuNhapKho_CellClick);
