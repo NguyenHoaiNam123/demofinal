@@ -55,7 +55,7 @@ namespace Test
 
         private void frmPhieuNhapKho_Load(object sender, EventArgs e)
         {
-            string conString = ConfigurationManager.ConnectionStrings["User"].ConnectionString.ToString();
+            string conString = ConfigurationManager.ConnectionStrings["QuanLyBanHang"].ConnectionString.ToString();
             con = new SqlConnection(conString);
             con.Open();
             HienThi();

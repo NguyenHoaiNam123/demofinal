@@ -31,7 +31,6 @@ namespace Test
         {
             this.lblMaDaiLy = new System.Windows.Forms.Label();
             this.txtMaDaiLy = new System.Windows.Forms.TextBox();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.btnTinhTrangThanhToan = new System.Windows.Forms.Button();
             this.btnTinhTrangDonHang = new System.Windows.Forms.Button();
@@ -39,14 +38,11 @@ namespace Test
             this.pnThongTin = new System.Windows.Forms.Panel();
             this.txtHinhThucThanhToan = new System.Windows.Forms.TextBox();
             this.lblHinhThucThanhToan = new System.Windows.Forms.Label();
-            this.txtGia = new System.Windows.Forms.TextBox();
-            this.lblGia = new System.Windows.Forms.Label();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.lblSoluong = new System.Windows.Forms.Label();
-            this.txtTenHang = new System.Windows.Forms.TextBox();
-            this.lblTenHang = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPhieuXuatKho = new System.Windows.Forms.DataGridView();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.lblNgayDat = new System.Windows.Forms.Label();
+            this.dtpNgayDat = new System.Windows.Forms.DateTimePicker();
             this.pnThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuatKho)).BeginInit();
@@ -69,18 +65,10 @@ namespace Test
             this.txtMaDaiLy.Size = new System.Drawing.Size(133, 20);
             this.txtMaDaiLy.TabIndex = 5;
             // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Location = new System.Drawing.Point(67, 194);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(134, 20);
-            this.txtTongTien.TabIndex = 23;
-            // 
             // lblTongTien
             // 
             this.lblTongTien.AutoSize = true;
-            this.lblTongTien.Location = new System.Drawing.Point(6, 201);
+            this.lblTongTien.Location = new System.Drawing.Point(3, 75);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(59, 13);
             this.lblTongTien.TabIndex = 22;
@@ -117,16 +105,12 @@ namespace Test
             // 
             // pnThongTin
             // 
+            this.pnThongTin.Controls.Add(this.dtpNgayDat);
+            this.pnThongTin.Controls.Add(this.lblNgayDat);
             this.pnThongTin.Controls.Add(this.txtHinhThucThanhToan);
             this.pnThongTin.Controls.Add(this.lblHinhThucThanhToan);
             this.pnThongTin.Controls.Add(this.txtTongTien);
-            this.pnThongTin.Controls.Add(this.txtGia);
-            this.pnThongTin.Controls.Add(this.lblGia);
-            this.pnThongTin.Controls.Add(this.txtSoLuong);
             this.pnThongTin.Controls.Add(this.lblTongTien);
-            this.pnThongTin.Controls.Add(this.lblSoluong);
-            this.pnThongTin.Controls.Add(this.txtTenHang);
-            this.pnThongTin.Controls.Add(this.lblTenHang);
             this.pnThongTin.Controls.Add(this.lblMaDaiLy);
             this.pnThongTin.Controls.Add(this.txtMaDaiLy);
             this.pnThongTin.Location = new System.Drawing.Point(439, 12);
@@ -136,7 +120,7 @@ namespace Test
             // 
             // txtHinhThucThanhToan
             // 
-            this.txtHinhThucThanhToan.Location = new System.Drawing.Point(134, 254);
+            this.txtHinhThucThanhToan.Location = new System.Drawing.Point(134, 112);
             this.txtHinhThucThanhToan.Name = "txtHinhThucThanhToan";
             this.txtHinhThucThanhToan.ReadOnly = true;
             this.txtHinhThucThanhToan.Size = new System.Drawing.Size(170, 20);
@@ -145,63 +129,11 @@ namespace Test
             // lblHinhThucThanhToan
             // 
             this.lblHinhThucThanhToan.AutoSize = true;
-            this.lblHinhThucThanhToan.Location = new System.Drawing.Point(6, 257);
+            this.lblHinhThucThanhToan.Location = new System.Drawing.Point(4, 115);
             this.lblHinhThucThanhToan.Name = "lblHinhThucThanhToan";
             this.lblHinhThucThanhToan.Size = new System.Drawing.Size(122, 13);
             this.lblHinhThucThanhToan.TabIndex = 31;
             this.lblHinhThucThanhToan.Text = "Hình Thức Thanh Toán:";
-            // 
-            // txtGia
-            // 
-            this.txtGia.Location = new System.Drawing.Point(67, 152);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.ReadOnly = true;
-            this.txtGia.Size = new System.Drawing.Size(134, 20);
-            this.txtGia.TabIndex = 30;
-            this.txtGia.TextChanged += new System.EventHandler(this.txtGia_TextChanged);
-            // 
-            // lblGia
-            // 
-            this.lblGia.AutoSize = true;
-            this.lblGia.Location = new System.Drawing.Point(6, 159);
-            this.lblGia.Name = "lblGia";
-            this.lblGia.Size = new System.Drawing.Size(26, 13);
-            this.lblGia.TabIndex = 29;
-            this.lblGia.Text = "Giá:";
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(67, 108);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.ReadOnly = true;
-            this.txtSoLuong.Size = new System.Drawing.Size(134, 20);
-            this.txtSoLuong.TabIndex = 9;
-            // 
-            // lblSoluong
-            // 
-            this.lblSoluong.AutoSize = true;
-            this.lblSoluong.Location = new System.Drawing.Point(6, 111);
-            this.lblSoluong.Name = "lblSoluong";
-            this.lblSoluong.Size = new System.Drawing.Size(56, 13);
-            this.lblSoluong.TabIndex = 8;
-            this.lblSoluong.Text = "Số Lượng:";
-            // 
-            // txtTenHang
-            // 
-            this.txtTenHang.Location = new System.Drawing.Point(67, 59);
-            this.txtTenHang.Name = "txtTenHang";
-            this.txtTenHang.ReadOnly = true;
-            this.txtTenHang.Size = new System.Drawing.Size(134, 20);
-            this.txtTenHang.TabIndex = 7;
-            // 
-            // lblTenHang
-            // 
-            this.lblTenHang.AutoSize = true;
-            this.lblTenHang.Location = new System.Drawing.Point(4, 59);
-            this.lblTenHang.Name = "lblTenHang";
-            this.lblTenHang.Size = new System.Drawing.Size(58, 13);
-            this.lblTenHang.TabIndex = 6;
-            this.lblTenHang.Text = "Tên Hàng:";
             // 
             // panel1
             // 
@@ -218,10 +150,36 @@ namespace Test
             this.dgvPhieuXuatKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuXuatKho.Location = new System.Drawing.Point(2, 12);
             this.dgvPhieuXuatKho.Name = "dgvPhieuXuatKho";
-            this.dgvPhieuXuatKho.Size = new System.Drawing.Size(431, 456);
+            this.dgvPhieuXuatKho.Size = new System.Drawing.Size(431, 145);
             this.dgvPhieuXuatKho.TabIndex = 14;
             this.dgvPhieuXuatKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuXuatKho_CellClick);
             this.dgvPhieuXuatKho.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuXuatKho_CellContentClick_1);
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(68, 72);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(134, 20);
+            this.txtTongTien.TabIndex = 23;
+            // 
+            // lblNgayDat
+            // 
+            this.lblNgayDat.AutoSize = true;
+            this.lblNgayDat.Location = new System.Drawing.Point(4, 43);
+            this.lblNgayDat.Name = "lblNgayDat";
+            this.lblNgayDat.Size = new System.Drawing.Size(52, 13);
+            this.lblNgayDat.TabIndex = 33;
+            this.lblNgayDat.Text = "Ngày Đặt";
+            // 
+            // dtpNgayDat
+            // 
+            this.dtpNgayDat.CustomFormat = "dd-MM-yyyy";
+            this.dtpNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayDat.Location = new System.Drawing.Point(67, 37);
+            this.dtpNgayDat.Name = "dtpNgayDat";
+            this.dtpNgayDat.Size = new System.Drawing.Size(134, 20);
+            this.dtpNgayDat.TabIndex = 34;
             // 
             // frmPhieuXuatKho
             // 
@@ -250,17 +208,13 @@ namespace Test
         private System.Windows.Forms.Button btnTinhTrangDonHang;
         private System.Windows.Forms.Button btnInPhieuXuatHang;
         private System.Windows.Forms.Label lblTongTien;
-        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Panel pnThongTin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvPhieuXuatKho;
-        private System.Windows.Forms.Label lblTenHang;
-        private System.Windows.Forms.TextBox txtTenHang;
-        private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.Label lblSoluong;
-        private System.Windows.Forms.Label lblGia;
-        private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.Label lblHinhThucThanhToan;
         private System.Windows.Forms.TextBox txtHinhThucThanhToan;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Label lblNgayDat;
+        private System.Windows.Forms.DateTimePicker dtpNgayDat;
     }
 }

@@ -30,6 +30,8 @@ namespace Test
         private void InitializeComponent()
         {
             this.grpNhapThongTin = new System.Windows.Forms.GroupBox();
+            this.dtpNgayDat = new System.Windows.Forms.DateTimePicker();
+            this.lblNgayDat = new System.Windows.Forms.Label();
             this.lblHinhThucThanhToan = new System.Windows.Forms.Label();
             this.cbbHinhThucThanhToan = new System.Windows.Forms.ComboBox();
             this.txtGia = new System.Windows.Forms.TextBox();
@@ -54,6 +56,8 @@ namespace Test
             // 
             // grpNhapThongTin
             // 
+            this.grpNhapThongTin.Controls.Add(this.dtpNgayDat);
+            this.grpNhapThongTin.Controls.Add(this.lblNgayDat);
             this.grpNhapThongTin.Controls.Add(this.lblHinhThucThanhToan);
             this.grpNhapThongTin.Controls.Add(this.cbbHinhThucThanhToan);
             this.grpNhapThongTin.Controls.Add(this.txtGia);
@@ -77,6 +81,24 @@ namespace Test
             this.grpNhapThongTin.TabStop = false;
             this.grpNhapThongTin.Text = "Nhập thông tin";
             // 
+            // dtpNgayDat
+            // 
+            this.dtpNgayDat.CustomFormat = "dd-MM-yyyy";
+            this.dtpNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayDat.Location = new System.Drawing.Point(136, 263);
+            this.dtpNgayDat.Name = "dtpNgayDat";
+            this.dtpNgayDat.Size = new System.Drawing.Size(207, 20);
+            this.dtpNgayDat.TabIndex = 30;
+            // 
+            // lblNgayDat
+            // 
+            this.lblNgayDat.AutoSize = true;
+            this.lblNgayDat.Location = new System.Drawing.Point(9, 263);
+            this.lblNgayDat.Name = "lblNgayDat";
+            this.lblNgayDat.Size = new System.Drawing.Size(52, 13);
+            this.lblNgayDat.TabIndex = 29;
+            this.lblNgayDat.Text = "Ngày Đặt";
+            // 
             // lblHinhThucThanhToan
             // 
             this.lblHinhThucThanhToan.AutoSize = true;
@@ -91,7 +113,7 @@ namespace Test
             this.cbbHinhThucThanhToan.FormattingEnabled = true;
             this.cbbHinhThucThanhToan.Items.AddRange(new object[] {
             "Momo : Số Momo",
-            "Chuyển khoản : STK",
+            "Banking",
             "Tiền mặt"});
             this.cbbHinhThucThanhToan.Location = new System.Drawing.Point(136, 217);
             this.cbbHinhThucThanhToan.Name = "cbbHinhThucThanhToan";
@@ -286,5 +308,7 @@ namespace Test
         private System.Windows.Forms.ComboBox cbbTenHang;
         private System.Windows.Forms.ComboBox cbbHinhThucThanhToan;
         private System.Windows.Forms.Label lblHinhThucThanhToan;
+        private System.Windows.Forms.Label lblNgayDat;
+        private System.Windows.Forms.DateTimePicker dtpNgayDat;
     }
 }

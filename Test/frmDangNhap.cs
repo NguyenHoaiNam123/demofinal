@@ -25,13 +25,13 @@ namespace Test
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-S9FKVPS\SQLEXPRESS;Initial Catalog=User;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-S9FKVPS\SQLEXPRESS;Initial Catalog=QuanLyBanHang;Integrated Security=True");
                 try
                 {
                     conn.Open();
                     string tk = txtTenDangNhap.Text;
                     string mk = txtMatKhau.Text;
-                    string sql = "select *from NguoiDung where TaiKhoan='" + tk + "' and MatKhau='"+mk+"'";
+                    string sql = "select *from TaiKhoan where TenDangNhap='" + tk + "' and MatKhau='"+mk+"'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader dta = cmd.ExecuteReader();
                     if(dta.Read()==true)

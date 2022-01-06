@@ -50,7 +50,7 @@ namespace Test
 
         private void frmDatHang_Load(object sender, EventArgs e)
         {
-            string conString = ConfigurationManager.ConnectionStrings["User"].ConnectionString.ToString();
+            string conString = ConfigurationManager.ConnectionStrings["QuanLyBanHang"].ConnectionString.ToString();
             con = new SqlConnection(conString);
             con.Open();
             HienThi();
@@ -59,7 +59,7 @@ namespace Test
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string sqlINSERT = "INSERT INTO DatHang VALUES (@MaDaiLy, @TenHang, @Gia, @SoLuong, @TongTien, @HinhThucThanhToan)";
+            string sqlINSERT = "INSERT INTO DatHang VALUES (@MaDaiLy, @TenHang, @Gia, @SoLuong, @TongTien, @HinhThucThanhToan, @NgayDat)";
             SqlCommand cmd = new SqlCommand(sqlINSERT, con);
             cmd.Parameters.AddWithValue("MaDaiLy", txtMaDaiLy.Text);
             cmd.Parameters.AddWithValue("TenHang", cbbTenHang.Text);
@@ -67,7 +67,7 @@ namespace Test
             cmd.Parameters.AddWithValue("SoLuong", nmSoLuong.Text);
             cmd.Parameters.AddWithValue("TongTien", txtTongTien.Text);
             cmd.Parameters.AddWithValue("HinhThucThanhToan", cbbHinhThucThanhToan.Text);
-
+            cmd.Parameters.AddWithValue("NgayDat", dtpNgayDat.Text);
             cmd.ExecuteNonQuery();
             HienThi();
         }
@@ -82,13 +82,14 @@ namespace Test
             cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
             cmd.Parameters.AddWithValue("tongTien", txtTongTien.Text);
             cmd.Parameters.AddWithValue("HinhThucThanhToan", cbbHinhThucThanhToan.Text);
+            cmd.Parameters.AddWithValue("NgayDat", dtpNgayDat.Text);
             cmd.ExecuteNonQuery();
             HienThi();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string sqlEDIT = "UPDATE DatHang SET tenHang = @tenHang, giaSP = @giaSP, soLuong = @soLuong, tongTien = @tongTien, HinhThucThanhToan = @HinhThucThanhToan WHERE maDaiLy = @maDaiLy";
+            string sqlEDIT = "UPDATE DatHang SET tenHang = @tenHang, giaSP = @giaSP, soLuong = @soLuong, tongTien = @tongTien, HinhThucThanhToan = @HinhThucThanhToan, NgayDat = @NgayDat WHERE maDaiLy = @maDaiLy";
             SqlCommand cmd = new SqlCommand(sqlEDIT, con);
             cmd.Parameters.AddWithValue("maDaiLy", txtMaDaiLy.Text);
             cmd.Parameters.AddWithValue("tenHang", cbbTenHang.Text);
@@ -96,6 +97,7 @@ namespace Test
             cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
             cmd.Parameters.AddWithValue("tongTien", txtTongTien.Text);
             cmd.Parameters.AddWithValue("HinhThucThanhToan", cbbHinhThucThanhToan.Text);
+            cmd.Parameters.AddWithValue("NgayDat", dtpNgayDat.Text);
             cmd.ExecuteNonQuery();
             HienThi();
         }
