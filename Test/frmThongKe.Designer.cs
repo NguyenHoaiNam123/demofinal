@@ -30,25 +30,25 @@ namespace Test
         private void InitializeComponent()
         {
             this.grpNhapThongTin = new System.Windows.Forms.GroupBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.lblSoluong = new System.Windows.Forms.Label();
+            this.txtMaHang = new System.Windows.Forms.TextBox();
+            this.lblMaHang = new System.Windows.Forms.Label();
             this.cboTenHang = new System.Windows.Forms.ComboBox();
             this.lblTenHang = new System.Windows.Forms.Label();
-            this.lblMaHang = new System.Windows.Forms.Label();
-            this.txtMaHang = new System.Windows.Forms.TextBox();
-            this.lblSoluong = new System.Windows.Forms.Label();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.lblTongTien = new System.Windows.Forms.Label();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.grpXuatKho = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblMaDaiLy = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtMaDaiLy = new System.Windows.Forms.TextBox();
             this.lblMaMatHang = new System.Windows.Forms.Label();
             this.txtMaMatHang = new System.Windows.Forms.TextBox();
             this.txtTenDaiLy = new System.Windows.Forms.TextBox();
             this.lblTenDaiLy = new System.Windows.Forms.Label();
-            this.txtMaDaiLy = new System.Windows.Forms.TextBox();
-            this.lblMaDaiLy = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvNhapKho = new System.Windows.Forms.DataGridView();
             this.dgvXuatKho = new System.Windows.Forms.DataGridView();
             this.grpNhapThongTin.SuspendLayout();
@@ -73,6 +73,54 @@ namespace Test
             this.grpNhapThongTin.TabIndex = 10;
             this.grpNhapThongTin.TabStop = false;
             this.grpNhapThongTin.Text = "Nhập Kho";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(85, 133);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(196, 20);
+            this.txtTongTien.TabIndex = 11;
+            // 
+            // lblTongTien
+            // 
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Location = new System.Drawing.Point(6, 140);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(59, 13);
+            this.lblTongTien.TabIndex = 11;
+            this.lblTongTien.Text = "Tổng Tiền:";
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(85, 100);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(196, 20);
+            this.txtSoLuong.TabIndex = 11;
+            // 
+            // lblSoluong
+            // 
+            this.lblSoluong.AutoSize = true;
+            this.lblSoluong.Location = new System.Drawing.Point(6, 100);
+            this.lblSoluong.Name = "lblSoluong";
+            this.lblSoluong.Size = new System.Drawing.Size(56, 13);
+            this.lblSoluong.TabIndex = 11;
+            this.lblSoluong.Text = "Số Lượng:";
+            // 
+            // txtMaHang
+            // 
+            this.txtMaHang.Location = new System.Drawing.Point(85, 23);
+            this.txtMaHang.Name = "txtMaHang";
+            this.txtMaHang.Size = new System.Drawing.Size(196, 20);
+            this.txtMaHang.TabIndex = 17;
+            // 
+            // lblMaHang
+            // 
+            this.lblMaHang.AutoSize = true;
+            this.lblMaHang.Location = new System.Drawing.Point(6, 26);
+            this.lblMaHang.Name = "lblMaHang";
+            this.lblMaHang.Size = new System.Drawing.Size(54, 13);
+            this.lblMaHang.TabIndex = 16;
+            this.lblMaHang.Text = "Mã Hàng:";
             // 
             // cboTenHang
             // 
@@ -100,54 +148,6 @@ namespace Test
             this.lblTenHang.TabIndex = 3;
             this.lblTenHang.Text = "Tên Hàng:";
             // 
-            // lblMaHang
-            // 
-            this.lblMaHang.AutoSize = true;
-            this.lblMaHang.Location = new System.Drawing.Point(6, 26);
-            this.lblMaHang.Name = "lblMaHang";
-            this.lblMaHang.Size = new System.Drawing.Size(54, 13);
-            this.lblMaHang.TabIndex = 16;
-            this.lblMaHang.Text = "Mã Hàng:";
-            // 
-            // txtMaHang
-            // 
-            this.txtMaHang.Location = new System.Drawing.Point(85, 23);
-            this.txtMaHang.Name = "txtMaHang";
-            this.txtMaHang.Size = new System.Drawing.Size(196, 20);
-            this.txtMaHang.TabIndex = 17;
-            // 
-            // lblSoluong
-            // 
-            this.lblSoluong.AutoSize = true;
-            this.lblSoluong.Location = new System.Drawing.Point(6, 100);
-            this.lblSoluong.Name = "lblSoluong";
-            this.lblSoluong.Size = new System.Drawing.Size(56, 13);
-            this.lblSoluong.TabIndex = 11;
-            this.lblSoluong.Text = "Số Lượng:";
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(85, 100);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(196, 20);
-            this.txtSoLuong.TabIndex = 11;
-            // 
-            // lblTongTien
-            // 
-            this.lblTongTien.AutoSize = true;
-            this.lblTongTien.Location = new System.Drawing.Point(6, 140);
-            this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(59, 13);
-            this.lblTongTien.TabIndex = 11;
-            this.lblTongTien.Text = "Tổng Tiền:";
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Location = new System.Drawing.Point(85, 133);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(196, 20);
-            this.txtTongTien.TabIndex = 11;
-            // 
             // grpXuatKho
             // 
             this.grpXuatKho.Controls.Add(this.textBox1);
@@ -167,6 +167,22 @@ namespace Test
             this.grpXuatKho.TabStop = false;
             this.grpXuatKho.Text = "Xuất Kho";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(87, 164);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 20);
+            this.textBox1.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 171);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Tổng Tiền:";
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -184,6 +200,15 @@ namespace Test
             this.comboBox1.Size = new System.Drawing.Size(196, 21);
             this.comboBox1.TabIndex = 15;
             // 
+            // lblMaDaiLy
+            // 
+            this.lblMaDaiLy.AutoSize = true;
+            this.lblMaDaiLy.Location = new System.Drawing.Point(6, 26);
+            this.lblMaDaiLy.Name = "lblMaDaiLy";
+            this.lblMaDaiLy.Size = new System.Drawing.Size(58, 13);
+            this.lblMaDaiLy.TabIndex = 0;
+            this.lblMaDaiLy.Text = "Mã Đại Lý:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -192,6 +217,13 @@ namespace Test
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tên Hàng:";
+            // 
+            // txtMaDaiLy
+            // 
+            this.txtMaDaiLy.Location = new System.Drawing.Point(87, 26);
+            this.txtMaDaiLy.Name = "txtMaDaiLy";
+            this.txtMaDaiLy.Size = new System.Drawing.Size(196, 20);
+            this.txtMaDaiLy.TabIndex = 5;
             // 
             // lblMaMatHang
             // 
@@ -225,38 +257,6 @@ namespace Test
             this.lblTenDaiLy.TabIndex = 2;
             this.lblTenDaiLy.Text = "Tên Đại Lý:";
             // 
-            // txtMaDaiLy
-            // 
-            this.txtMaDaiLy.Location = new System.Drawing.Point(87, 26);
-            this.txtMaDaiLy.Name = "txtMaDaiLy";
-            this.txtMaDaiLy.Size = new System.Drawing.Size(196, 20);
-            this.txtMaDaiLy.TabIndex = 5;
-            // 
-            // lblMaDaiLy
-            // 
-            this.lblMaDaiLy.AutoSize = true;
-            this.lblMaDaiLy.Location = new System.Drawing.Point(6, 26);
-            this.lblMaDaiLy.Name = "lblMaDaiLy";
-            this.lblMaDaiLy.Size = new System.Drawing.Size(58, 13);
-            this.lblMaDaiLy.TabIndex = 0;
-            this.lblMaDaiLy.Text = "Mã Đại Lý:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Tổng Tiền:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(87, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 20);
-            this.textBox1.TabIndex = 24;
-            // 
             // dgvNhapKho
             // 
             this.dgvNhapKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -284,7 +284,7 @@ namespace Test
             this.Controls.Add(this.grpXuatKho);
             this.Controls.Add(this.grpNhapThongTin);
             this.Name = "frmThongKe";
-            this.Text = "frmThongKe";
+            this.Text = "THỐNG KÊ";
             this.grpNhapThongTin.ResumeLayout(false);
             this.grpNhapThongTin.PerformLayout();
             this.grpXuatKho.ResumeLayout(false);

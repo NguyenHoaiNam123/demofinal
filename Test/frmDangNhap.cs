@@ -13,6 +13,7 @@ namespace Test
 {
     public partial class frmDangNhap : Form
     {
+        ConnectSQL con = new ConnectSQL(); 
         public frmDangNhap()
         {
             InitializeComponent();
@@ -25,33 +26,28 @@ namespace Test
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-S9FKVPS\SQLEXPRESS;Initial Catalog=QuanLyBanHang;Integrated Security=True");
-                try
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = con.GetData("SELECT * FROM TaiKhoan WHERE TenDangNhap = '" + txtTenDangNhap.Text + "' and MatKhau = '" + txtMatKhau.Text + "'");
+                if (dt.Rows.Count > 0)
                 {
-                    conn.Open();
-                    string tk = txtTenDangNhap.Text;
-                    string mk = txtMatKhau.Text;
-                    string sql = "select *from TaiKhoan where TenDangNhap='" + tk + "' and MatKhau='"+mk+"'";
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    SqlDataReader dta = cmd.ExecuteReader();
-                    if(dta.Read()==true)
-                    {
-                        frmMain main = new frmMain();
-                        main.ShowDialog();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sai Tên Đăng Nhập hoặc Mật Khẩu!");
-                    }    
-
+                    frmMain main = new frmMain(dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][6].ToString());
+                    this.Hide();
+                    main.ShowDialog();
 
                 }
-                catch(Exception ex)
+                else
                 {
-                    MessageBox.Show("Lỗi kết nối!");
-                }    
+                    MessageBox.Show("Sai Tên Đăng Nhập hoặc Mật Khẩu!!!");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi Kết Nối!");
+            }
         }
+
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {

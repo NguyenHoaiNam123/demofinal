@@ -24,7 +24,7 @@ namespace Test
         {
             DataTable dataTable = new DataTable();
             string query = "select * from DatHang";
-            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            using (SqlConnection sqlConnection = ConnectSQL.GetSqlConnection())
             {
                 sqlConnection.Open();
                 dataAdapter = new SqlDataAdapter(query, sqlConnection);
@@ -35,7 +35,7 @@ namespace Test
         }
         public void Command(string query)
         {
-            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            using (SqlConnection sqlConnection = ConnectSQL.GetSqlConnection())
             {
                 sqlConnection.Open();
                 SqlCommand = new SqlCommand(query, sqlConnection);

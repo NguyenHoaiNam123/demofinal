@@ -30,6 +30,7 @@ namespace Test
         private void InitializeComponent()
         {
             this.grpNhapThongTin = new System.Windows.Forms.GroupBox();
+            this.cbbMaDaiLy = new System.Windows.Forms.ComboBox();
             this.dtpNgayDat = new System.Windows.Forms.DateTimePicker();
             this.lblNgayDat = new System.Windows.Forms.Label();
             this.lblHinhThucThanhToan = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@ namespace Test
             this.nmSoLuong = new System.Windows.Forms.NumericUpDown();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.txtMaDaiLy = new System.Windows.Forms.TextBox();
             this.lblMaDaiLy = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@ namespace Test
             // 
             // grpNhapThongTin
             // 
+            this.grpNhapThongTin.Controls.Add(this.cbbMaDaiLy);
             this.grpNhapThongTin.Controls.Add(this.dtpNgayDat);
             this.grpNhapThongTin.Controls.Add(this.lblNgayDat);
             this.grpNhapThongTin.Controls.Add(this.lblHinhThucThanhToan);
@@ -66,7 +67,6 @@ namespace Test
             this.grpNhapThongTin.Controls.Add(this.nmSoLuong);
             this.grpNhapThongTin.Controls.Add(this.btnSua);
             this.grpNhapThongTin.Controls.Add(this.btnThem);
-            this.grpNhapThongTin.Controls.Add(this.txtMaDaiLy);
             this.grpNhapThongTin.Controls.Add(this.lblMaDaiLy);
             this.grpNhapThongTin.Controls.Add(this.btnXoa);
             this.grpNhapThongTin.Controls.Add(this.btnThoat);
@@ -77,9 +77,23 @@ namespace Test
             this.grpNhapThongTin.Location = new System.Drawing.Point(506, 12);
             this.grpNhapThongTin.Name = "grpNhapThongTin";
             this.grpNhapThongTin.Size = new System.Drawing.Size(370, 471);
-            this.grpNhapThongTin.TabIndex = 2;
+            this.grpNhapThongTin.TabIndex = 3;
             this.grpNhapThongTin.TabStop = false;
             this.grpNhapThongTin.Text = "Nhập thông tin";
+            // 
+            // cbbMaDaiLy
+            // 
+            this.cbbMaDaiLy.FormattingEnabled = true;
+            this.cbbMaDaiLy.Items.AddRange(new object[] {
+            "DL01",
+            "DL02",
+            "DL03",
+            "DL04",
+            "DL05"});
+            this.cbbMaDaiLy.Location = new System.Drawing.Point(136, 13);
+            this.cbbMaDaiLy.Name = "cbbMaDaiLy";
+            this.cbbMaDaiLy.Size = new System.Drawing.Size(207, 21);
+            this.cbbMaDaiLy.TabIndex = 1;
             // 
             // dtpNgayDat
             // 
@@ -88,7 +102,7 @@ namespace Test
             this.dtpNgayDat.Location = new System.Drawing.Point(136, 263);
             this.dtpNgayDat.Name = "dtpNgayDat";
             this.dtpNgayDat.Size = new System.Drawing.Size(207, 20);
-            this.dtpNgayDat.TabIndex = 30;
+            this.dtpNgayDat.TabIndex = 7;
             // 
             // lblNgayDat
             // 
@@ -125,7 +139,7 @@ namespace Test
             this.txtGia.Location = new System.Drawing.Point(136, 133);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(207, 20);
-            this.txtGia.TabIndex = 3;
+            this.txtGia.TabIndex = 4;
             this.txtGia.TextChanged += new System.EventHandler(this.txtGia_TextChanged);
             // 
             // lblGia
@@ -153,14 +167,14 @@ namespace Test
             this.cbbTenHang.Location = new System.Drawing.Point(136, 61);
             this.cbbTenHang.Name = "cbbTenHang";
             this.cbbTenHang.Size = new System.Drawing.Size(207, 21);
-            this.cbbTenHang.TabIndex = 1;
+            this.cbbTenHang.TabIndex = 2;
             // 
             // nmSoLuong
             // 
             this.nmSoLuong.Location = new System.Drawing.Point(136, 97);
             this.nmSoLuong.Name = "nmSoLuong";
             this.nmSoLuong.Size = new System.Drawing.Size(113, 20);
-            this.nmSoLuong.TabIndex = 4;
+            this.nmSoLuong.TabIndex = 3;
             this.nmSoLuong.Value = new decimal(new int[] {
             1,
             0,
@@ -173,7 +187,7 @@ namespace Test
             this.btnSua.Location = new System.Drawing.Point(88, 425);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 8;
+            this.btnSua.TabIndex = 9;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -183,17 +197,10 @@ namespace Test
             this.btnThem.Location = new System.Drawing.Point(6, 425);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 7;
+            this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // txtMaDaiLy
-            // 
-            this.txtMaDaiLy.Location = new System.Drawing.Point(136, 13);
-            this.txtMaDaiLy.Name = "txtMaDaiLy";
-            this.txtMaDaiLy.Size = new System.Drawing.Size(207, 20);
-            this.txtMaDaiLy.TabIndex = 0;
             // 
             // lblMaDaiLy
             // 
@@ -209,7 +216,7 @@ namespace Test
             this.btnXoa.Location = new System.Drawing.Point(169, 425);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 9;
+            this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -219,7 +226,7 @@ namespace Test
             this.btnThoat.Location = new System.Drawing.Point(250, 425);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 10;
+            this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
@@ -293,7 +300,6 @@ namespace Test
         private System.Windows.Forms.GroupBox grpNhapThongTin;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox txtMaDaiLy;
         private System.Windows.Forms.Label lblMaDaiLy;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
@@ -310,5 +316,6 @@ namespace Test
         private System.Windows.Forms.Label lblHinhThucThanhToan;
         private System.Windows.Forms.Label lblNgayDat;
         private System.Windows.Forms.DateTimePicker dtpNgayDat;
+        private System.Windows.Forms.ComboBox cbbMaDaiLy;
     }
 }

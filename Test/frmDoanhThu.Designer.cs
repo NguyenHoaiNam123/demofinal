@@ -49,7 +49,7 @@ namespace Test
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblDoanhThu);
             this.Name = "frmDoanhThu";
-            this.Text = "frmDoanhThu";
+            this.Text = "DOANH THU";
             this.ResumeLayout(false);
             this.PerformLayout();
 

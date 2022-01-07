@@ -54,14 +54,14 @@ namespace Test
             con = new SqlConnection(conString);
             con.Open();
             HienThi();
-            txtMaDaiLy.Focus();
+            cbbMaDaiLy.Focus();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             string sqlINSERT = "INSERT INTO DatHang VALUES (@MaDaiLy, @TenHang, @Gia, @SoLuong, @TongTien, @HinhThucThanhToan, @NgayDat)";
             SqlCommand cmd = new SqlCommand(sqlINSERT, con);
-            cmd.Parameters.AddWithValue("MaDaiLy", txtMaDaiLy.Text);
+            cmd.Parameters.AddWithValue("MaDaiLy", cbbMaDaiLy.Text);
             cmd.Parameters.AddWithValue("TenHang", cbbTenHang.Text);
             cmd.Parameters.AddWithValue("Gia", txtGia.Text);
             cmd.Parameters.AddWithValue("SoLuong", nmSoLuong.Text);
@@ -76,7 +76,7 @@ namespace Test
         {
             string sqlDELETE = "DELETE FROM DatHang WHERE maDaiLy = @maDaiLy";
             SqlCommand cmd = new SqlCommand(sqlDELETE, con);
-            cmd.Parameters.AddWithValue("maDaiLy", txtMaDaiLy.Text);
+            cmd.Parameters.AddWithValue("maDaiLy", cbbMaDaiLy.Text);
             cmd.Parameters.AddWithValue("tenHang", cbbTenHang.Text);
             cmd.Parameters.AddWithValue("giaSP", txtGia.Text);
             cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
@@ -91,7 +91,7 @@ namespace Test
         {
             string sqlEDIT = "UPDATE DatHang SET tenHang = @tenHang, giaSP = @giaSP, soLuong = @soLuong, tongTien = @tongTien, HinhThucThanhToan = @HinhThucThanhToan, NgayDat = @NgayDat WHERE maDaiLy = @maDaiLy";
             SqlCommand cmd = new SqlCommand(sqlEDIT, con);
-            cmd.Parameters.AddWithValue("maDaiLy", txtMaDaiLy.Text);
+            cmd.Parameters.AddWithValue("maDaiLy", cbbMaDaiLy.Text);
             cmd.Parameters.AddWithValue("tenHang", cbbTenHang.Text);
             cmd.Parameters.AddWithValue("giaSP", txtGia.Text);
             cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
@@ -106,7 +106,7 @@ namespace Test
         {
             int numrow;
             numrow = e.RowIndex;
-            txtMaDaiLy.Text = dgvDatHang.Rows[numrow].Cells[0].Value.ToString();
+            cbbMaDaiLy.Text = dgvDatHang.Rows[numrow].Cells[0].Value.ToString();
             cbbTenHang.Text = dgvDatHang.Rows[numrow].Cells[1].Value.ToString();
             txtGia.Text = dgvDatHang.Rows[numrow].Cells[2].Value.ToString();
             nmSoLuong.Text = dgvDatHang.Rows[numrow].Cells[3].Value.ToString();

@@ -43,13 +43,34 @@ namespace Test
             dgvPhieuXuatKho.DataSource = dt;
             dgvPhieuXuatKho.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-
+        public void TinhTrang()
+        {
+            string sqlSELECT = "SELECT *FROM ChuyenHang";
+            SqlCommand cmd = new SqlCommand(sqlSELECT, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgvTinhTrangDonHang.DataSource = dt;
+            dgvTinhTrangDonHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+        public void ThanhToan()
+        {
+            string sqlSELECT = "SELECT *FROM TinhTrangDonHang";
+            SqlCommand cmd = new SqlCommand(sqlSELECT, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgvTinhTrangThanhToan.DataSource = dt;
+            dgvTinhTrangThanhToan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
         private void frmPhieuXuatKho_Load(object sender, EventArgs e)
         {
             string conString = ConfigurationManager.ConnectionStrings["QuanLyBanHang"].ConnectionString.ToString();
             con = new SqlConnection(conString);
             con.Open();
             HienThi();
+            TinhTrang();
+            ThanhToan();
             
             
 
@@ -73,6 +94,10 @@ namespace Test
         private void btnInPhieuXuatHang_Click(object sender, EventArgs e)
         {
         }
-        
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
