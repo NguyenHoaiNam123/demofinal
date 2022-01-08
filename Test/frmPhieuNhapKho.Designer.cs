@@ -39,7 +39,6 @@ namespace Test
             this.dtpNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.txtMaHang = new System.Windows.Forms.TextBox();
             this.lblMaHang = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@ namespace Test
             this.lblSoluong = new System.Windows.Forms.Label();
             this.lblTenHang = new System.Windows.Forms.Label();
             this.dsPhieuNhapKho = new System.Windows.Forms.DataGridView();
+            this.cbbMaHang = new System.Windows.Forms.ComboBox();
             this.grpNhapThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPhieuNhapKho)).BeginInit();
@@ -64,6 +64,7 @@ namespace Test
             // 
             // grpNhapThongTin
             // 
+            this.grpNhapThongTin.Controls.Add(this.cbbMaHang);
             this.grpNhapThongTin.Controls.Add(this.nmSoLuong);
             this.grpNhapThongTin.Controls.Add(this.cbbTenHang);
             this.grpNhapThongTin.Controls.Add(this.txtTongTien);
@@ -72,7 +73,6 @@ namespace Test
             this.grpNhapThongTin.Controls.Add(this.dtpNgayNhap);
             this.grpNhapThongTin.Controls.Add(this.btnSua);
             this.grpNhapThongTin.Controls.Add(this.btnThem);
-            this.grpNhapThongTin.Controls.Add(this.txtMaHang);
             this.grpNhapThongTin.Controls.Add(this.lblMaHang);
             this.grpNhapThongTin.Controls.Add(this.btnXoa);
             this.grpNhapThongTin.Controls.Add(this.btnThoat);
@@ -180,13 +180,6 @@ namespace Test
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // txtMaHang
-            // 
-            this.txtMaHang.Location = new System.Drawing.Point(88, 16);
-            this.txtMaHang.Name = "txtMaHang";
-            this.txtMaHang.Size = new System.Drawing.Size(207, 20);
-            this.txtMaHang.TabIndex = 1;
-            // 
             // lblMaHang
             // 
             this.lblMaHang.AutoSize = true;
@@ -263,6 +256,24 @@ namespace Test
             this.dsPhieuNhapKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsPhieuNhapKho_CellClick);
             this.dsPhieuNhapKho.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsPhieuNhapKho_CellContentClick);
             // 
+            // cbbMaHang
+            // 
+            this.cbbMaHang.FormattingEnabled = true;
+            this.cbbMaHang.Items.AddRange(new object[] {
+            "M01",
+            "M02",
+            "M03",
+            "M04",
+            "M05",
+            "M06",
+            "M07",
+            "M08",
+            "M09"});
+            this.cbbMaHang.Location = new System.Drawing.Point(88, 16);
+            this.cbbMaHang.Name = "cbbMaHang";
+            this.cbbMaHang.Size = new System.Drawing.Size(207, 21);
+            this.cbbMaHang.TabIndex = 23;
+            // 
             // frmPhieuNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,7 +306,6 @@ namespace Test
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.DataGridView dsPhieuNhapKho;
         private System.Windows.Forms.Label lblMaHang;
-        private System.Windows.Forms.TextBox txtMaHang;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Label lblNgayNhap;
@@ -304,5 +314,6 @@ namespace Test
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.ComboBox cbbTenHang;
         private System.Windows.Forms.NumericUpDown nmSoLuong;
+        private System.Windows.Forms.ComboBox cbbMaHang;
     }
 }

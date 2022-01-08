@@ -43,7 +43,7 @@ namespace Test
         {
             string sqlDELETE = "DELETE FROM PhieuNhapHang WHERE maHang = @maHang";
             SqlCommand cmd = new SqlCommand(sqlDELETE, con);
-            cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
+            cmd.Parameters.AddWithValue("maHang", cbbMaHang.Text);
             cmd.Parameters.AddWithValue("tenHang", cbbTenHang.Text);
             cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
             cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
@@ -81,7 +81,7 @@ namespace Test
         {
             string sqlINSERT = "INSERT INTO PhieuNhapHang VALUES (@maHang, @tenHang, @soLuong, @giaNhapHang, @tongTien, @ngayNhap)";
             SqlCommand cmd = new SqlCommand(sqlINSERT, con);
-            cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
+            cmd.Parameters.AddWithValue("maHang", cbbMaHang.Text);
             cmd.Parameters.AddWithValue("tenHang", cbbTenHang.Text);
             cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
             cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
@@ -97,7 +97,7 @@ namespace Test
         {
             string sqlEDIT = "UPDATE PhieuNhapHang SET tenHang = @tenHang, soLuong = @soLuong, giaNhapHang = @giaNhapHang, tongTien = @tongTien, ngayNhap = @ngayNhap WHERE maHang = @maHang";
             SqlCommand cmd = new SqlCommand(sqlEDIT, con);
-            cmd.Parameters.AddWithValue("maHang", txtMaHang.Text);
+            cmd.Parameters.AddWithValue("maHang", cbbMaHang.Text);
             cmd.Parameters.AddWithValue("tenHang", cbbTenHang.Text);
             cmd.Parameters.AddWithValue("soLuong", nmSoLuong.Text);
             cmd.Parameters.AddWithValue("giaNhapHang", txtGiaNhapHang.Text);
@@ -121,7 +121,7 @@ namespace Test
         {
             int numrow;
             numrow = e.RowIndex;
-            txtMaHang.Text = dsPhieuNhapKho.Rows[numrow].Cells[0].Value.ToString();
+            cbbMaHang.Text = dsPhieuNhapKho.Rows[numrow].Cells[0].Value.ToString();
             cbbTenHang.Text = dsPhieuNhapKho.Rows[numrow].Cells[1].Value.ToString();
             nmSoLuong.Text = dsPhieuNhapKho.Rows[numrow].Cells[2].Value.ToString();
             txtGiaNhapHang.Text = dsPhieuNhapKho.Rows[numrow].Cells[3].Value.ToString();
