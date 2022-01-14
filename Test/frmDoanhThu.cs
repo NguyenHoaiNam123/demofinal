@@ -26,6 +26,9 @@ namespace Test
             con = new SqlConnection(conString);
             con.Open();
             NhapKho();
+            DoanhThu();
+            int sc = dgvDoanhThu.Rows.Count;
+            
         }
         public void NhapKho()
         {
@@ -64,7 +67,23 @@ namespace Test
             //ẩn cột 
             dgvDoanhThu.Columns["HinhThucThanhToan"].Visible = false;
         }
-
+        public void DoanhThu()
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-S9FKVPS\SQLEXPRESS;Initial Catalog=QuanLyBanHang;Integrated Security=True");
+            SqlDataAdapter dr = new SqlDataAdapter("SELECT PhieuNhapHang.tenHang, PhieuNhapHang.soLuong, PhieuNhapHang.tongTien, DatHang.TenHang, DatHang.soLuong, DatHang.tongTien FROM PhieuNhapHang, DatHang", conn);
+            DataTable dt = new DataTable();
+            dr.Fill(dt);
+            dgvDoanhThu.DataSource = dt;
+            dgvDoanhThu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDoanhThu.Columns["tenHang"].HeaderText = "Tên Hàng Nhập";
+            dgvDoanhThu.Columns["soLuong"].HeaderText = "Số Lượng Nhập";
+            dgvDoanhThu.Columns["tongTien"].HeaderText = "Tổng Tiền Nhập";
+            dgvDoanhThu.Columns["TenHang"].HeaderText = "Tên Hàng Xuất";
+            dgvDoanhThu.Columns["soLuong"].HeaderText = "Số Lượng Xuất";
+            dgvDoanhThu.Columns["tongTien"].HeaderText = "Tổng Tiền Xuất";
+        }
+        
+        
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
             if (rdbNhapKho.Checked)
@@ -77,11 +96,16 @@ namespace Test
                 XuatKho();
 
             }
-            else if (rdbDoanhThuHangThang.Checked)
+            else if (rdbDoanhThu.Checked)
             {
-                return;
+                DoanhThu();
 
             }
+        }
+
+        private void txtThanhTien_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

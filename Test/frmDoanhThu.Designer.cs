@@ -34,12 +34,13 @@ namespace Test
             this.rdbXuatKho = new System.Windows.Forms.RadioButton();
             this.rdbNhapKho = new System.Windows.Forms.RadioButton();
             this.btnDoanhThu = new System.Windows.Forms.Button();
-            this.rdbDoanhThuHangThang = new System.Windows.Forms.RadioButton();
+            this.rdbDoanhThu = new System.Windows.Forms.RadioButton();
             this.mtbTuNgay = new System.Windows.Forms.MaskedTextBox();
             this.mtbDenNgay = new System.Windows.Forms.MaskedTextBox();
             this.lblTuNgay = new System.Windows.Forms.Label();
             this.lblDenNgay = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtThanhTien = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@ namespace Test
             this.dgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDoanhThu.Location = new System.Drawing.Point(-8, 147);
             this.dgvDoanhThu.Name = "dgvDoanhThu";
-            this.dgvDoanhThu.Size = new System.Drawing.Size(848, 315);
+            this.dgvDoanhThu.Size = new System.Drawing.Size(848, 245);
             this.dgvDoanhThu.TabIndex = 20;
             // 
             // rdbXuatKho
@@ -100,16 +101,16 @@ namespace Test
             this.btnDoanhThu.UseVisualStyleBackColor = true;
             this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
             // 
-            // rdbDoanhThuHangThang
+            // rdbDoanhThu
             // 
-            this.rdbDoanhThuHangThang.AutoSize = true;
-            this.rdbDoanhThuHangThang.ForeColor = System.Drawing.SystemColors.Control;
-            this.rdbDoanhThuHangThang.Location = new System.Drawing.Point(589, 101);
-            this.rdbDoanhThuHangThang.Name = "rdbDoanhThuHangThang";
-            this.rdbDoanhThuHangThang.Size = new System.Drawing.Size(142, 17);
-            this.rdbDoanhThuHangThang.TabIndex = 24;
-            this.rdbDoanhThuHangThang.Text = "Doanh Thu Hàng Tháng";
-            this.rdbDoanhThuHangThang.UseVisualStyleBackColor = true;
+            this.rdbDoanhThu.AutoSize = true;
+            this.rdbDoanhThu.ForeColor = System.Drawing.SystemColors.Control;
+            this.rdbDoanhThu.Location = new System.Drawing.Point(589, 101);
+            this.rdbDoanhThu.Name = "rdbDoanhThu";
+            this.rdbDoanhThu.Size = new System.Drawing.Size(79, 17);
+            this.rdbDoanhThu.TabIndex = 24;
+            this.rdbDoanhThu.Text = "Doanh Thu";
+            this.rdbDoanhThu.UseVisualStyleBackColor = true;
             // 
             // mtbTuNgay
             // 
@@ -158,19 +159,29 @@ namespace Test
             this.label1.TabIndex = 30;
             this.label1.Text = "TOBACCO VIET COMPANY";
             // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.Location = new System.Drawing.Point(712, 407);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.ReadOnly = true;
+            this.txtThanhTien.Size = new System.Drawing.Size(100, 20);
+            this.txtThanhTien.TabIndex = 31;
+            this.txtThanhTien.TextChanged += new System.EventHandler(this.txtThanhTien_TextChanged);
+            // 
             // frmDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(838, 450);
+            this.Controls.Add(this.txtThanhTien);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDenNgay);
             this.Controls.Add(this.lblTuNgay);
             this.Controls.Add(this.mtbDenNgay);
             this.Controls.Add(this.mtbTuNgay);
             this.Controls.Add(this.btnDoanhThu);
-            this.Controls.Add(this.rdbDoanhThuHangThang);
+            this.Controls.Add(this.rdbDoanhThu);
             this.Controls.Add(this.rdbXuatKho);
             this.Controls.Add(this.rdbNhapKho);
             this.Controls.Add(this.dgvDoanhThu);
@@ -191,11 +202,12 @@ namespace Test
         private System.Windows.Forms.RadioButton rdbXuatKho;
         private System.Windows.Forms.RadioButton rdbNhapKho;
         private System.Windows.Forms.Button btnDoanhThu;
-        private System.Windows.Forms.RadioButton rdbDoanhThuHangThang;
+        private System.Windows.Forms.RadioButton rdbDoanhThu;
         private System.Windows.Forms.MaskedTextBox mtbTuNgay;
         private System.Windows.Forms.MaskedTextBox mtbDenNgay;
         private System.Windows.Forms.Label lblTuNgay;
         private System.Windows.Forms.Label lblDenNgay;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtThanhTien;
     }
 }

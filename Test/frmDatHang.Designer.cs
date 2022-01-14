@@ -30,6 +30,8 @@ namespace Test
         private void InitializeComponent()
         {
             this.grpNhapThongTin = new System.Windows.Forms.GroupBox();
+            this.btnHienThi = new System.Windows.Forms.Button();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.cbbMaDaiLy = new System.Windows.Forms.ComboBox();
             this.dtpNgayDat = new System.Windows.Forms.DateTimePicker();
             this.lblNgayDat = new System.Windows.Forms.Label();
@@ -38,7 +40,6 @@ namespace Test
             this.txtGia = new System.Windows.Forms.TextBox();
             this.lblGia = new System.Windows.Forms.Label();
             this.cbbTenHang = new System.Windows.Forms.ComboBox();
-            this.nmSoLuong = new System.Windows.Forms.NumericUpDown();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.lblMaDaiLy = new System.Windows.Forms.Label();
@@ -50,12 +51,13 @@ namespace Test
             this.lblTenHang = new System.Windows.Forms.Label();
             this.dgvDatHang = new System.Windows.Forms.DataGridView();
             this.grpNhapThongTin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatHang)).BeginInit();
             this.SuspendLayout();
             // 
             // grpNhapThongTin
             // 
+            this.grpNhapThongTin.Controls.Add(this.btnHienThi);
+            this.grpNhapThongTin.Controls.Add(this.txtSoLuong);
             this.grpNhapThongTin.Controls.Add(this.cbbMaDaiLy);
             this.grpNhapThongTin.Controls.Add(this.dtpNgayDat);
             this.grpNhapThongTin.Controls.Add(this.lblNgayDat);
@@ -64,7 +66,6 @@ namespace Test
             this.grpNhapThongTin.Controls.Add(this.txtGia);
             this.grpNhapThongTin.Controls.Add(this.lblGia);
             this.grpNhapThongTin.Controls.Add(this.cbbTenHang);
-            this.grpNhapThongTin.Controls.Add(this.nmSoLuong);
             this.grpNhapThongTin.Controls.Add(this.btnSua);
             this.grpNhapThongTin.Controls.Add(this.btnThem);
             this.grpNhapThongTin.Controls.Add(this.lblMaDaiLy);
@@ -81,8 +82,34 @@ namespace Test
             this.grpNhapThongTin.TabStop = false;
             this.grpNhapThongTin.Text = "Nhập thông tin";
             // 
+            // btnHienThi
+            // 
+            this.btnHienThi.Location = new System.Drawing.Point(251, 61);
+            this.btnHienThi.Name = "btnHienThi";
+            this.btnHienThi.Size = new System.Drawing.Size(92, 23);
+            this.btnHienThi.TabIndex = 31;
+            this.btnHienThi.Text = "Hiển Thị";
+            this.btnHienThi.UseVisualStyleBackColor = true;
+            this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(136, 91);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(207, 20);
+            this.txtSoLuong.TabIndex = 30;
+            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
+            // 
             // cbbMaDaiLy
             // 
+            this.cbbMaDaiLy.AutoCompleteCustomSource.AddRange(new string[] {
+            "DL01",
+            "DL02",
+            "DL03",
+            "DL04",
+            "DL05"});
+            this.cbbMaDaiLy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbMaDaiLy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbMaDaiLy.FormattingEnabled = true;
             this.cbbMaDaiLy.Items.AddRange(new object[] {
             "DL01",
@@ -140,7 +167,6 @@ namespace Test
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(207, 20);
             this.txtGia.TabIndex = 4;
-            this.txtGia.TextChanged += new System.EventHandler(this.txtGia_TextChanged);
             // 
             // lblGia
             // 
@@ -153,6 +179,18 @@ namespace Test
             // 
             // cbbTenHang
             // 
+            this.cbbTenHang.AutoCompleteCustomSource.AddRange(new string[] {
+            "Jet",
+            "Hero",
+            "555",
+            "Sài Gòn",
+            "Marlboro",
+            "Craven",
+            "Khánh Hội",
+            "Camel",
+            "Marula"});
+            this.cbbTenHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbTenHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbTenHang.FormattingEnabled = true;
             this.cbbTenHang.Items.AddRange(new object[] {
             "Jet",
@@ -166,21 +204,9 @@ namespace Test
             "Marula"});
             this.cbbTenHang.Location = new System.Drawing.Point(136, 61);
             this.cbbTenHang.Name = "cbbTenHang";
-            this.cbbTenHang.Size = new System.Drawing.Size(207, 21);
+            this.cbbTenHang.Size = new System.Drawing.Size(108, 21);
             this.cbbTenHang.TabIndex = 2;
-            // 
-            // nmSoLuong
-            // 
-            this.nmSoLuong.Location = new System.Drawing.Point(136, 97);
-            this.nmSoLuong.Name = "nmSoLuong";
-            this.nmSoLuong.Size = new System.Drawing.Size(113, 20);
-            this.nmSoLuong.TabIndex = 3;
-            this.nmSoLuong.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nmSoLuong.ValueChanged += new System.EventHandler(this.nmSoLuong_ValueChanged);
+            this.cbbTenHang.SelectedValueChanged += new System.EventHandler(this.cbbTenHang_SelectedValueChanged);
             // 
             // btnSua
             // 
@@ -238,7 +264,6 @@ namespace Test
             this.txtTongTien.Size = new System.Drawing.Size(207, 20);
             this.txtTongTien.TabIndex = 5;
             this.txtTongTien.Text = "0";
-            this.txtTongTien.TextChanged += new System.EventHandler(this.txtGiaTien_TextChanged);
             // 
             // lblTongTien
             // 
@@ -289,7 +314,6 @@ namespace Test
             this.Load += new System.EventHandler(this.frmDatHang_Load);
             this.grpNhapThongTin.ResumeLayout(false);
             this.grpNhapThongTin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatHang)).EndInit();
             this.ResumeLayout(false);
 
@@ -308,7 +332,6 @@ namespace Test
         private System.Windows.Forms.Label lblSoluong;
         private System.Windows.Forms.Label lblTenHang;
         private System.Windows.Forms.DataGridView dgvDatHang;
-        private System.Windows.Forms.NumericUpDown nmSoLuong;
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.Label lblGia;
         private System.Windows.Forms.ComboBox cbbTenHang;
@@ -317,5 +340,7 @@ namespace Test
         private System.Windows.Forms.Label lblNgayDat;
         private System.Windows.Forms.DateTimePicker dtpNgayDat;
         private System.Windows.Forms.ComboBox cbbMaDaiLy;
+        private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.Button btnHienThi;
     }
 }

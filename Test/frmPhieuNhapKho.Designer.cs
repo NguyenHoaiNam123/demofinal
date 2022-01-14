@@ -31,7 +31,9 @@ namespace Test
         {
             this.labelTen = new System.Windows.Forms.Label();
             this.grpNhapThongTin = new System.Windows.Forms.GroupBox();
-            this.nmSoLuong = new System.Windows.Forms.NumericUpDown();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.btnHienThi = new System.Windows.Forms.Button();
+            this.cbbMaHang = new System.Windows.Forms.ComboBox();
             this.cbbTenHang = new System.Windows.Forms.ComboBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.lblTongTien = new System.Windows.Forms.Label();
@@ -47,9 +49,8 @@ namespace Test
             this.lblSoluong = new System.Windows.Forms.Label();
             this.lblTenHang = new System.Windows.Forms.Label();
             this.dsPhieuNhapKho = new System.Windows.Forms.DataGridView();
-            this.cbbMaHang = new System.Windows.Forms.ComboBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.grpNhapThongTin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPhieuNhapKho)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,8 +65,9 @@ namespace Test
             // 
             // grpNhapThongTin
             // 
+            this.grpNhapThongTin.Controls.Add(this.txtSoLuong);
+            this.grpNhapThongTin.Controls.Add(this.btnHienThi);
             this.grpNhapThongTin.Controls.Add(this.cbbMaHang);
-            this.grpNhapThongTin.Controls.Add(this.nmSoLuong);
             this.grpNhapThongTin.Controls.Add(this.cbbTenHang);
             this.grpNhapThongTin.Controls.Add(this.txtTongTien);
             this.grpNhapThongTin.Controls.Add(this.lblTongTien);
@@ -87,26 +89,70 @@ namespace Test
             this.grpNhapThongTin.TabStop = false;
             this.grpNhapThongTin.Text = "Nhập thông tin";
             // 
-            // nmSoLuong
+            // txtSoLuong
             // 
-            this.nmSoLuong.Location = new System.Drawing.Point(88, 120);
-            this.nmSoLuong.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nmSoLuong.Name = "nmSoLuong";
-            this.nmSoLuong.Size = new System.Drawing.Size(113, 20);
-            this.nmSoLuong.TabIndex = 3;
-            this.nmSoLuong.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nmSoLuong.ValueChanged += new System.EventHandler(this.nmSoLuong_ValueChanged);
+            this.txtSoLuong.Location = new System.Drawing.Point(88, 114);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(207, 20);
+            this.txtSoLuong.TabIndex = 24;
+            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
+            // 
+            // btnHienThi
+            // 
+            this.btnHienThi.Location = new System.Drawing.Point(220, 14);
+            this.btnHienThi.Name = "btnHienThi";
+            this.btnHienThi.Size = new System.Drawing.Size(75, 23);
+            this.btnHienThi.TabIndex = 23;
+            this.btnHienThi.Text = "Hiển Thị";
+            this.btnHienThi.UseVisualStyleBackColor = true;
+            this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
+            // 
+            // cbbMaHang
+            // 
+            this.cbbMaHang.AutoCompleteCustomSource.AddRange(new string[] {
+            "M01",
+            "M02",
+            "M03",
+            "M04",
+            "M05",
+            "M06",
+            "M07",
+            "M08",
+            "M09"});
+            this.cbbMaHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbMaHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbMaHang.FormattingEnabled = true;
+            this.cbbMaHang.Items.AddRange(new object[] {
+            "M01",
+            "M02",
+            "M03",
+            "M04",
+            "M05",
+            "M06",
+            "M07",
+            "M08",
+            "M09"});
+            this.cbbMaHang.Location = new System.Drawing.Point(88, 16);
+            this.cbbMaHang.MaxDropDownItems = 9;
+            this.cbbMaHang.Name = "cbbMaHang";
+            this.cbbMaHang.Size = new System.Drawing.Size(120, 21);
+            this.cbbMaHang.TabIndex = 1;
+            this.cbbMaHang.SelectedValueChanged += new System.EventHandler(this.cbbMaHang_SelectedValueChanged);
             // 
             // cbbTenHang
             // 
+            this.cbbTenHang.AutoCompleteCustomSource.AddRange(new string[] {
+            "Jet",
+            "Hero",
+            "555",
+            "Sài Gòn",
+            "Marlboro",
+            "Craven",
+            "Khánh Hội",
+            "Camel",
+            "Marula"});
+            this.cbbTenHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbTenHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbTenHang.FormattingEnabled = true;
             this.cbbTenHang.Items.AddRange(new object[] {
             "Jet",
@@ -256,24 +302,6 @@ namespace Test
             this.dsPhieuNhapKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsPhieuNhapKho_CellClick);
             this.dsPhieuNhapKho.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsPhieuNhapKho_CellContentClick);
             // 
-            // cbbMaHang
-            // 
-            this.cbbMaHang.FormattingEnabled = true;
-            this.cbbMaHang.Items.AddRange(new object[] {
-            "M01",
-            "M02",
-            "M03",
-            "M04",
-            "M05",
-            "M06",
-            "M07",
-            "M08",
-            "M09"});
-            this.cbbMaHang.Location = new System.Drawing.Point(88, 16);
-            this.cbbMaHang.Name = "cbbMaHang";
-            this.cbbMaHang.Size = new System.Drawing.Size(207, 21);
-            this.cbbMaHang.TabIndex = 23;
-            // 
             // frmPhieuNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,7 +315,6 @@ namespace Test
             this.Load += new System.EventHandler(this.frmPhieuNhapKho_Load);
             this.grpNhapThongTin.ResumeLayout(false);
             this.grpNhapThongTin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPhieuNhapKho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -313,7 +340,9 @@ namespace Test
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.ComboBox cbbTenHang;
-        private System.Windows.Forms.NumericUpDown nmSoLuong;
         private System.Windows.Forms.ComboBox cbbMaHang;
+        private System.Windows.Forms.Button btnHienThi;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox txtSoLuong;
     }
 }
