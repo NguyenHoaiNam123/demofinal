@@ -127,15 +127,15 @@ namespace Test
         {
             listItem = new List<TenGia>()
             {
-                new TenGia(){Ten = "Jet", Gia = 3000},
-                new TenGia(){Ten = "Hero", Gia = 2000},
-                new TenGia(){Ten = "555", Gia = 4500},
-                new TenGia(){Ten = "Sài Gòn", Gia = 1500},
-                new TenGia(){Ten = "Marboro", Gia = 3200},
-                new TenGia(){Ten = "Craven", Gia = 2500},
-                new TenGia(){Ten = "Khánh Hội", Gia = 1300},
-                new TenGia(){Ten = "Camel", Gia = 3500},
-                new TenGia(){Ten = "Marula", Gia = 4000}
+                new TenGia(){Ten = "Jet", Gia = 3500},
+                new TenGia(){Ten = "Hero", Gia = 2200},
+                new TenGia(){Ten = "555", Gia = 5000},
+                new TenGia(){Ten = "Sài Gòn", Gia = 1800},
+                new TenGia(){Ten = "Marboro", Gia = 3500},
+                new TenGia(){Ten = "Craven", Gia = 2800},
+                new TenGia(){Ten = "Khánh Hội", Gia = 1500},
+                new TenGia(){Ten = "Camel", Gia = 3800},
+                new TenGia(){Ten = "Marula", Gia = 4200}
             };
             cbbTenHang.DataSource = listItem;
             cbbTenHang.DisplayMember = "Ten";

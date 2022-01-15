@@ -18,7 +18,28 @@ namespace Test
         {
             InitializeComponent();
         }
-        SqlConnection con;
+
+        SqlConnection con; 
+       public void TienXuat()
+        {
+            float sc = dgvDoanhThu.Rows.Count;
+            float thanhtien = 0;
+            for (int i = 0; i < sc - 1; i++)
+            {
+                thanhtien += float.Parse(dgvDoanhThu.Rows[i].Cells[4].Value.ToString());
+            }
+            txtThanhTien.Text = thanhtien.ToString();
+        }
+        public void TienNhap()
+        {
+            float sc = dgvDoanhThu.Rows.Count;
+            float thanhtien = 0;
+            for (int i = 0; i < sc - 1; i++)
+            {
+                thanhtien += float.Parse(dgvDoanhThu.Rows[i].Cells[4].Value.ToString());
+            }
+            txtThanhTien.Text = thanhtien.ToString();
+        }
 
         private void frmDoanhThu_Load(object sender, EventArgs e)
         {
@@ -27,7 +48,6 @@ namespace Test
             con.Open();
             NhapKho();
             DoanhThu();
-            int sc = dgvDoanhThu.Rows.Count;
             
         }
         public void NhapKho()
@@ -89,18 +109,19 @@ namespace Test
             if (rdbNhapKho.Checked)
             {
                 NhapKho();
-                return;
+                TienXuat();
             }
             else if (rdbXuatKho.Checked)
             {
                 XuatKho();
-
+                TienNhap();
             }
             else if (rdbDoanhThu.Checked)
             {
                 DoanhThu();
 
             }
+
         }
 
         private void txtThanhTien_TextChanged(object sender, EventArgs e)
